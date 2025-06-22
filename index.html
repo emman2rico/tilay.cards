@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tilay Cards</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Texture Background -->
+  <div class="texture-overlay"></div>
+
+  <!-- Hero Header -->
+  <header class="hero-header" id="heroHeader">
+    <img src="your-logo.png" alt="Company Logo" class="hero-logo" id="heroLogo" />
+  </header>
+
+  <!-- Sticky Header -->
+  <header class="sticky-header" id="stickyHeader">
+    <img src="your-logo.png" alt="Company Logo" class="logo" style="max-height: 40px;" />
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile">
+    <img src="" alt="Client Photo" class="avatar" id="clientPhoto">
+    <h2 id="clientName">Client Name</h2>
+    <p id="clientTitle">Professional Title</p>
+    <div class="contact-options">
+      <a href="#" id="clientPhoneLink"><i class="fas fa-phone"></i></a> 
+      <a href="#" id="clientEmailLink"><i class="fas fa-envelope"></i></a>
+      <a href="#" target="_blank" id="clientMapLink"><i class="fas fa-map-marker-alt"></i></a>
+    </div>
+    <a href="#" class="save-contact" id="saveContactBtn">Save Contact</a>
+  </section>
+
+  <!-- Scrollable Content -->
+  <div class="scroll-content" id="scrollContent">
+    <!-- Contact Info -->
+    <section id="contact" class="contact">
+      <h3>Contact Info</h3>
+      <ul class="contact-info-list">
+        <li><i class="fas fa-phone"></i> <span id="infoPhone">+1 234 567 8901</span></li>
+        <li><i class="fas fa-map-marker-alt"></i> <span id="infoAddress">123 Main Street, New York, NY 10001</span></li>
+        <li><i class="fas fa-envelope"></i> <span id="infoEmail">client@example.com</span></li>
+      </ul>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <h3>Services</h3>
+      <ul id="serviceList"></ul>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <h3>Location</h3>
+      <iframe id="mapIframe" allowfullscreen></iframe>
+      <div class="map-info">
+        <strong>Our Office:</strong><br>
+        <span id="mapAddress">123 Main Street, New York, NY 10001</span><br>
+        Open Mon-Fri | 9 AM – 6 PM
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section id="social-media" class="social-links">
+      <h3>Social Media</h3>
+      <div class="social-icons">
+        <a href="#" id="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" id="telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="#" id="facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" id="tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="#" id="website" target="_blank"><i class="fas fa-globe"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Your Company. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Support</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

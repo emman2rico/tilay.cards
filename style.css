@@ -1,0 +1,252 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.texture-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+  opacity: 0.03;
+}
+
+.hero-header {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-logo {
+  max-height: 150px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease-out;
+}
+
+.hero-logo.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+  text-align: center;
+  padding: 15px 0;
+  z-index: 999;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.sticky-header.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.profile {
+  text-align: center;
+  padding: 50px 20px 20px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+  z-index: 2;
+  position: relative;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #333;
+  margin-bottom: 20px;
+}
+
+.profile h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: white;
+}
+
+.profile p {
+  color: #bbb;
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.contact-options a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  background-color: #2c2c2c;
+  color: #aaa;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.contact-options a:hover {
+  background-color: #444;
+  color: white;
+}
+
+.save-contact {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #222;
+  color: white;
+  padding: 12px 22px;
+  border: 1px solid #444;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.save-contact:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.scroll-content {
+  padding: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.scroll-content section,
+.map-section,
+.social-links {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.map-section {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.map-info {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.contact-info-list {
+  list-style: none;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.contact-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.contact-info-list i {
+  color: #673AB7;
+  font-size: 18px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: #aaa;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  transform: scale(1.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 30px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
